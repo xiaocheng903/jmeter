@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.1">
+<hashTree>
+<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+<stringProp name="TestPlan.comments"></stringProp>
+<boolProp name="TestPlan.functional_mode">false</boolProp>
+<boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+<elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+<collectionProp name="Arguments.arguments" />
+</elementProp>
+<stringProp name="TestPlan.user_define_classpath"></stringProp>
+</TestPlan>
+<hashTree>
+<ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+<elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+<boolProp name="LoopController.continue_forever">false</boolProp>
+<stringProp name="LoopController.loops">1</stringProp>
+</elementProp>
+<stringProp name="ThreadGroup.num_threads">1</stringProp>
+<stringProp name="ThreadGroup.ramp_time">1</stringProp>
+<longProp name="ThreadGroup.start_time">1281132211000</longProp>
+<longProp name="ThreadGroup.end_time">1281132211000</longProp>
+<boolProp name="ThreadGroup.scheduler">false</boolProp>
+<stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+<stringProp name="ThreadGroup.duration"></stringProp>
+<stringProp name="ThreadGroup.delay"></stringProp>
+</ThreadGroup>
+<hashTree>
+<CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+<collectionProp name="CookieManager.cookies" />
+<boolProp name="CookieManager.clearEachIteration">false</boolProp>
+<stringProp name="CookieManager.policy">rfc2109</stringProp>
+</CookieManager>
+<hashTree />
+<Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+<collectionProp name="Arguments.arguments">
+<elementProp name="VIEWSTATE" elementType="Argument">
+<stringProp name="Argument.name">VIEWSTATE</stringProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+</elementProp>
+<elementProp name="jsessionid" elementType="Argument">
+<stringProp name="Argument.name">jsessionid</stringProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+</elementProp>
+</collectionProp>
+</Arguments>
+<hashTree />
+<HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+<collectionProp name="HeaderManager.headers">
+<elementProp name="" elementType="Header">
+<stringProp xml:space="preserve" name="Header.name">User-Agent</stringProp>
+<stringProp xml:space="preserve" name="Header.value">Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko</stringProp>
+</elementProp>
+<elementProp name="" elementType="Header">
+<stringProp xml:space="preserve" name="Header.name">Accept</stringProp>
+<stringProp xml:space="preserve" name="Header.value">*/*</stringProp>
+</elementProp>
+<elementProp name="" elementType="Header">
+<stringProp xml:space="preserve" name="Header.name">Accept-Language</stringProp>
+<stringProp xml:space="preserve" name="Header.value">zh-CN</stringProp>
+</elementProp>
+</collectionProp>
+</HeaderManager>
+<hashTree />
+<LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Step 1" enabled="true">
+<boolProp name="LoopController.continue_forever">false</boolProp>
+<stringProp name="LoopController.loops">1</stringProp>
+</LoopController>
+<hashTree>
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="http://wiki.diandainfo.cn/login.action">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">http://wiki.diandainfo.cn/login.action<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="logout">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">true</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">logout</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">wiki.diandainfo.cn</stringProp>
+<stringProp name="HTTPSampler.port">18090</stringProp>
+<stringProp name="HTTPSampler.protocol">http</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/login.action</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.baidu.com/">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.baidu.com/<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.baidu.com/s">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.baidu.com/s<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="ie">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">utf-8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ie</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="mod">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">11</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">mod</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isbd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isbd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">198DF37C68963651</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ie">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">utf-8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ie</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="f">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">f</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_bp">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_bp</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_idx">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_idx</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tn">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">baidu</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tn</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="wd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">濂藉ソ鍏堢敓</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">wd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_pq">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">ca9683f30002a151</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_pq</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_t">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">c6dcN/EUeSj/QtpqA2Pdwlkj1Egvg7IwmfcYPzfHLSohp6XwEiCJ0N4/QQQ</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_t</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rqlang">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">cn</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rqlang</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_enter">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_enter</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sug3">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sug3</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1446_26968_21108_26923_22072</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_ss">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_ss</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="clist">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">clist</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="hsug">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">hsug</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="csor">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">4</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">csor</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="pstg">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">5</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">pstg</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_cr1">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">25472</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_cr1</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/s</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.baidu.com/s">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.baidu.com/s<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="ie">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">utf-8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ie</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="mod">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">mod</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isbd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isbd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">198DF37C68963651</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ie">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">utf-8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ie</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="f">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">f</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_bp">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_bp</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_idx">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_idx</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tn">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">baidu</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tn</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="wd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">濂藉ソ鍏堢敓</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">wd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_pq">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">ca9683f30002a151</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_pq</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_t">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">c6dcN/EUeSj/QtpqA2Pdwlkj1Egvg7IwmfcYPzfHLSohp6XwEiCJ0N4/QQQ</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_t</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rqlang">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">cn</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rqlang</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_enter">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_enter</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sug3">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">2</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sug3</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sug1">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sug1</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sug7">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">100</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sug7</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sug2">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sug2</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="inputT">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1606</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">inputT</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sug4">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1606</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sug4</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1446_26968_21108_26923_22072</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_ss">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_ss</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="clist">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">clist</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="hsug">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">hsug</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="f4s">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">f4s</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="csor">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">4</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">csor</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_cr1">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">30348</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_cr1</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/s</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.baidu.com/s">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.baidu.com/s<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="ie">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">utf-8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ie</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="csq">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">csq</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="pstg">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">20</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">pstg</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="mod">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">2</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">mod</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isbd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isbd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="cqid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">baa5f0d3000267f4</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">cqid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="istc">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">816</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">istc</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ver">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">RwgeGNMD0uTaje7dp_GGyO9W2rN5WCiUD9i</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ver</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="chk">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">5b83759b</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">chk</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">198DF37C68963651</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ie">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">utf-8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ie</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="f">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">f</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_bp">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_bp</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_idx">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_idx</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tn">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">baidu</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tn</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="wd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">濂藉ソ鍏堢敓</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">wd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_pq">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">ca9683f30002a151</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_pq</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_t">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">c6dcN/EUeSj/QtpqA2Pdwlkj1Egvg7IwmfcYPzfHLSohp6XwEiCJ0N4/QQQ</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_t</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rqlang">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">cn</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rqlang</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_enter">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_enter</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_sug3">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_sug3</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="f4s">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">f4s</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_ck">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">97357.0.-1.-1.-1.-1.-1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_ck</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_isid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1446_26968_21108_26923_22072</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_isid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isnop">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isnop</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="isctg">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">5</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">isctg</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_stat">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">-2</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_stat</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rsv_bp">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rsv_bp</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/s</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://www.baidu.com/cache/fpid/ielib_0108.js">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://www.baidu.com/cache/fpid/ielib_0108.js<collectionProp name="Arguments.arguments">
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/cache/fpid/ielib_0108.js</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="http://www.baidu.com/link">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">http://www.baidu.com/link<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="url">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">Nk_y5XePaPIOLO-a7h4YsEnz7RtGCMZg2tpt3KJmxoo78OiN32Ex3gV_ITFVd_icg-QP2jvdwf7kCsEigiffyGnWTGQC_T5AhW68l78Av6_jp6oD1eCHI49KuMvfXkVf</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">url</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="wd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value"></stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">wd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="eqid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">baa5f0d3000267f4000000045b83759b</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">eqid</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">www.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol">http</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/link</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="http://baike.baidu.com/link">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">http://baike.baidu.com/link<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="url">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">Nk_y5XePaPIOLO-a7h4YsEnz7RtGCMZg2tpt3KJmxoo78OiN32Ex3gV_ITFVd_icg-QP2jvdwf7kCsEigiffyGnWTGQC_T5AhW68l78Av6_jp6oD1eCHI49KuMvfXkVf</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">url</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">baike.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol">http</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/link</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname="https://pos.baidu.com/lcdm">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">https://pos.baidu.com/lcdm<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="conwid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">250</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">conwid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="conhei">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">250</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">conhei</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rdid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1997633</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rdid</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dc">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">3</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dc</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="di">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">u1997633</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">di</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dri">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dri</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dis">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dis</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dai">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dai</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ps">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0x0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ps</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="coa">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">wn=2&amp;hn=8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">coa</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="enu">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">encoding</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">enu</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dcb">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">___adblockplus</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dcb</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dtm">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">HTML_POST</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dtm</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dvi">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0.0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dvi</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dci">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">-1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dci</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dpt">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">none</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dpt</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tsr">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tsr</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tpr">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341989106</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tpr</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ti">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">濂藉ソ鍏堢敓锛堢編鍥?008骞翠僵椤柯烽噷寰锋墽瀵肩數褰憋級_鐧惧害鐧剧</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ti</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ari">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">2</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ari</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="dbv">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">dbv</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="drs">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">4</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">drs</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="pcs">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1217x690</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">pcs</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="pss">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1228x8008</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">pss</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="cfv">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">cfv</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="cpl">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">cpl</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="chi">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">chi</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="cce">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">true</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">cce</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="cec">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">utf-8</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">cec</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tlm">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341989</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tlm</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="prot">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">2</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">prot</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="rw">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">707</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">rw</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ltu">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">https://baike.baidu.com/item/%E5%A5%BD%E5%A5%BD%E5%85%88%E7%94%9F/7030?fr=aladdin</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ltu</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ltr">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">http://www.baidu.com/link?url=Nk_y5XePaPIOLO-a7h4YsEnz7RtGCMZg2tpt3KJmxoo78OiN32Ex3gV_ITFVd_icg-QP2jvdwf7kCsEigiffyGnWTGQC_T5AhW68l78Av6_jp6oD1eCHI49KuMvfXkVf&amp;wd=&amp;eqid=baa5f0d3000267f4000000045b83759b</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ltr</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="ecd">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">ecd</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="uc">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1536x824</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">uc</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="pis">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">-1x-1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">pis</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="sr">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1536x864</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">sr</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tcn">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341989</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tcn</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="qn">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">f99fe1c5f9a4aaf2</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">qn</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tt">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341989090.19.186.188</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tt</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain">pos.baidu.com</stringProp>
+<stringProp name="HTTPSampler.port">443</stringProp>
+<stringProp name="HTTPSampler.protocol">https</stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/lcdm</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/usercenter/login">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/usercenter/login<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="msg">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">msg</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341987371</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/usercenter/login</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/wikisecond/lemmasecond">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/wikisecond/lemmasecond<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="lemmaId">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">lemmaId</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/wikisecond/lemmasecond</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/wikiui/sharecounter">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/wikiui/sharecounter<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="lemmaId">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">lemmaId</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="method">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">get</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">method</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/wikiui/sharecounter</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/platform/getmoviecomments">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/platform/getmoviecomments<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="lemmaId">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">lemmaId</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/platform/getmoviecomments</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///wikiui/api/zhixinmap">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///wikiui/api/zhixinmap<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="lemmaId">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">lemmaId</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/wikiui/api/zhixinmap</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/lemmapv">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/lemmapv<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="id">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">d59481c0740f648f9b31e638</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">id</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="r">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0.17237315837790162</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">r</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/lemmapv</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/wikiui/getasp">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/wikiui/getasp<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="word">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">好好先生</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">word</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="asp_url">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">https://baike.baidu.com/item/%E5%A5%BD%E5%A5%BD%E5%85%88%E7%94%9F/7030?lemmaid=7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">asp_url</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="eid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">802</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">eid</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/wikiui/getasp</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/common/bkclick">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/common/bkclick<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="type">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">pc_guesslike_request</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">type</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341987372</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/common/bkclick</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/wikiui/guesslike">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/wikiui/guesslike<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="url">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">https://baike.baidu.com/item/%E5%A5%BD%E5%A5%BD%E5%85%88%E7%94%9F/7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">url</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="lemmaTitle">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">濂藉ソ鍏堢敓</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">lemmaTitle</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="eid">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">202</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">eid</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/wikiui/guesslike</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/wikiui/sharecounter">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/wikiui/sharecounter<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="lemmaId">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">lemmaId</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="method">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">get</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">method</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/wikiui/sharecounter</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/usercenter/login">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/usercenter/login<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="_">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341987373</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/usercenter/login</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/wikiui/getlemmaconfig">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/wikiui/getlemmaconfig<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="r">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">0.37364147242877704</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">r</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/wikiui/getlemmaconfig</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/wikiad/getsquirrels">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/wikiad/getsquirrels<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="lemmaId">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">7030</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">lemmaId</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="tags">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">鐢靛奖,缇庡浗鐢靛奖,鐢靛奖浣滃搧,鐖辨儏鐢靛奖,鍠滃墽鐢靛奖</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">tags</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341987374</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/wikiad/getsquirrels</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/common/bkclick">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/common/bkclick<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="type">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">pc_guesslike_success</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">type</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341987376</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/common/bkclick</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+<HTTPSampler guiclass="HttpTestSampleGui" testclass="HTTPSampler" enabled="true" testname=":///api/common/bkclick">
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">:///api/common/bkclick<collectionProp name="Arguments.arguments">
+<elementProp elementType="HTTPArgument" name="type">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">pc_guesslike_view</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">type</stringProp>
+</elementProp>
+<elementProp elementType="HTTPArgument" name="_">
+<boolProp name="HTTPArgument.always_encode">true</boolProp>
+<stringProp name="Argument.value">1535341987377</stringProp>
+<stringProp name="Argument.metadata">=</stringProp>
+<boolProp name="HTTPArgument.use_equals">true</boolProp>
+<stringProp name="Argument.name">_</stringProp>
+</elementProp>
+</collectionProp>
+</elementProp>
+<stringProp name="HTTPSampler.domain"></stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.protocol"></stringProp>
+<stringProp name="HTTPSampler.contentEncoding"></stringProp>
+<stringProp name="HTTPSampler.path">/api/common/bkclick</stringProp>
+<stringProp name="HTTPSampler.method">GET</stringProp>
+<boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+<boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+<boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+<boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+<stringProp name="HTTPSampler.mimetype"></stringProp>
+<stringProp name="HTTPSampler.monitor">false</stringProp>
+<stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+</HTTPSampler>
+<hashTree />
+</hashTree>
+</hashTree>
+</hashTree>
+</hashTree>
+</jmeterTestPlan>
